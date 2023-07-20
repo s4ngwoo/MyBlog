@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for category in categories %}
+<section>
+    {% if posts %}
+        <h2 class="txt-center">{{ category.title }}</h2>
+        <div class="grid-container">
+        {% for post in posts %}
+            <article>
+                <div>
+                    <a href="{% url 'myblog:post' post.pk %}">
+                        <h3 class="txt-center">{{ post.title }}</h3>
+                        <p>{{ post.content | truncatewords:50 }}</p>
+                    </a>
+                    <div>
+                        Posted on <a href="#">{{ post.create_date }}</a> by <a href="#">{{ post.author }}</a>
+                    </div>
+                </div>
+            </article>
+        {% endfor %}
+        </div>
+    {% else %}
+        <h2 class="txt-center">No posts</h2>
+        <div class="grid-container">
+        {% for i in '123456'|make_list %}
+            <article>
+                <div class="flex-vertical">
+                    <div class="center"><p>img</p></div>
+                    <h3 class="txt-center">아직 글이 없습니다.</h3>
+                </div>
+            </article>
+        {% endfor %}
+        </div>
+    {% endif %}
+</section>
+{% endfor %}
+{% endblock %}

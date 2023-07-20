@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "myblog"
+version = "0.1.0"
+description = "blog project"
+authors = ["s4ngwoo <s4ngwoo.lee@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^4.2.3"
+bs4 = "^0.0.1"
+beautifulsoup4 = "^4.12.2"
+wheel = "^0.40.0"
+cffi = "^1.15.1"
+asgiref = "^3.7.2"
+attr = "^0.3.2"
+build = "^0.10.0"
+certifi = "^2023.5.7"
+html5lib = "^1.1"
+pyproject-hooks = "^1.0.0"
+rapidfuzz = "^3.1.1"
+referencing = "^0.29.1"
+requests = "^2.31.0"
+requests-toolbelt = "^1.0.0"
+rpds-py = "^0.8.10"
+shellingham = "^1.5.0.post1"
+six = "^1.16.0"
+soupsieve = "^2.4.1"
+sqlparse = "^0.4.4"
+tomli = "^2.0.1"
+tomlkit = "^0.11.8"
+trove-classifiers = "^2023.7.6"
+typing-extensions = "^4.7.1"
+urllib3 = "^2.0.3"
+virtualenv = "^20.24.0"
+webencodings = "^0.5.1"
+xattr = "^0.10.1"
+zipp = "^3.16.2"
+cryptography = "^41.0.2"
+psycopg2-binary = "^2.9.6"
+gunicorn = "^20.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
