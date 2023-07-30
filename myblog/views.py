@@ -5,6 +5,7 @@ from .models import Post, Category
 def landing(request):
     posts = Post.objects.all().order_by('-create_date') 
     categories = Category.objects.all()
+    print(categories)
     context = {'categories':categories,
                'posts': posts, 
                }
