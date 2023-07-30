@@ -9,14 +9,11 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 RUN apt update
-# RUN apt install -y libpq-dev 
-# RUN apt install -y gcc 
 
 COPY . /usr/src/app/
 
 # install dependencies
 RUN pip3 install --upgrade pip
-# RUN pip install -r requirements.txt 
 RUN pip3 install poetry
 RUN poetry config virtualenvs.create false && poetry install
 
